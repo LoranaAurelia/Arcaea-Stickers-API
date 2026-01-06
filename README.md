@@ -1,4 +1,4 @@
-````md
+
 # Arcaea Link Play Sticker Generator
 
 一个用于生成 **Arcaea Link Play Sticker** 的小工具：前端调参、服务端渲染出图，得到可直接分享/嵌入的 PNG 链接。
@@ -9,7 +9,7 @@
 - 横向/竖向位置调节（x / y）
 - 旋转（Rotate）
 - 字体大小（Font Size）
-- 行距/间距（Spacing）
+- 行距（Spacing）
 - Curve：**未完全实现**（目前仅保留实验入口）
 
 ## 技术结构
@@ -21,7 +21,7 @@
   - 字体：`/api/fonts/*.ttf`
 - 部署形态：**丢进任意 PHP + Nginx/Apache 的网站目录即可**，不需要额外 Nginx rewrite（`/api/*.php` 为真实文件）
 
-## 快速部署（宝塔 / 常规 Nginx PHP 环境）
+## 快速部署
 ### 依赖
 - PHP 8.x（建议 8.4）
 - PHP 扩展：`gd`（需要 FreeType 支持）、`mbstring`
@@ -31,7 +31,6 @@
    ```bash
    npm ci
    npm run build
-````
 
 2. 将 `build/` 目录内的**所有内容**上传/覆盖到你的网站根目录
    构建产物应包含：
