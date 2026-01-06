@@ -126,7 +126,8 @@ const fetchPreviewBlob = async (asDownload = false) => {
 
 const copyLink = async () => {
   try {
-    await navigator.clipboard.writeText(debouncedPreviewUrl);
+    const absoluteUrl = new URL(debouncedPreviewUrl, window.location.href).toString();
+    await navigator.clipboard.writeText(absoluteUrl);
     setOpenCopySnackbar(true);
   } catch (e) {
     console.error(e);
