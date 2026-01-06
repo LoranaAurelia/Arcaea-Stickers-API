@@ -21,7 +21,7 @@
   - 字体：`/api/fonts/*.ttf`
 - 部署形态：**丢进任意 PHP + Nginx/Apache 的网站目录即可**，不需要额外 Nginx rewrite（`/api/*.php` 为真实文件）
 
-## 快速部署（宝塔 / 常规 Nginx PHP 环境）
+## 快速部署
 ### 依赖
 - PHP 8.x（建议 8.4）
 - PHP 扩展：`gd`（需要 FreeType 支持）、`mbstring`
