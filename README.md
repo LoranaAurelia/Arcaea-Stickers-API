@@ -9,7 +9,7 @@
 - 横向/竖向位置调节（x / y）
 - 旋转（Rotate）
 - 字体大小（Font Size）
-- 行距/间距（Spacing）
+- 行距（Spacing）
 - Curve：**未完全实现**（目前仅保留实验入口）
 
 ## 技术结构
