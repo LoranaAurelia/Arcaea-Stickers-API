@@ -1,4 +1,4 @@
-````md
+
 # Arcaea Link Play Sticker Generator
 
 一个用于生成 **Arcaea Link Play Sticker** 的小工具：前端调参、服务端渲染出图，得到可直接分享/嵌入的 PNG 链接。
@@ -31,7 +31,6 @@
    ```bash
    npm ci
    npm run build
-````
 
 2. 将 `build/` 目录内的**所有内容**上传/覆盖到你的网站根目录
    构建产物应包含：
