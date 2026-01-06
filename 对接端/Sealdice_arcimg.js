@@ -148,7 +148,6 @@
   cmd.solve = async (ctx, msg, cmdArgs) => {
     const prefix = replyPrefix(msg);
 
-    // cmdArgs.rawArgs：命令后的原始参数串（见 seal.d.ts）
     const raw = (cmdArgs.rawArgs ?? '').trim();
     const args = parseQuotedArgs(raw);
 
@@ -157,7 +156,10 @@
         ctx,
         msg,
         prefix +
-          '用法：.arcimg 角色 或 .arcimg <角色编号> [文本] [x] [y] [Rotate] [Font size] [Spacing]'
+          'Arcaea贴纸生成：.arcimg 角色 / .arcimg <角色编号> [文本] [x] [y] [旋转] [字体大小] [换行间距]\n' +
+          '文本含空格请用引号包住，例如：.arcimg 14 "Hello World"\n' +
+          '本扩展仅适合用于填入基本文本，如果你想对文字大小位置和角度等进行细节调整，建议使用网页端作图：\n' +
+          DEFAULT_BASE_URL
       );
       return seal.ext.newCmdExecuteResult(true);
     }
@@ -175,7 +177,7 @@
     // arcimg <id> ...
     const id = Number(args[0]);
     if (!Number.isFinite(id)) {
-      seal.replyToSender(ctx, msg, prefix + '角色编号应为数字；查看列表用：.arcimg 角色');
+      seal.replyToSender(ctx, msg, prefix + '角色ID应为数字！查看角色ID列表用：.arcimg 角色');
       return seal.ext.newCmdExecuteResult(true);
     }
 
